@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ProjectIncident.Core.Views.LoginPage"
+             Title="Login"
+             BackgroundColor="Teal">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Sign Up" Command="{Binding OnSignInCommand}"/>
+	    </ContentPage.ToolbarItems>
+	    <ContentPage.Content >
+    		<StackLayout 
+                    VerticalOptions="StartAndExpand"
+                    BackgroundColor="Gray">
+    			<Label 
+                    Text="{Binding titleUsername}"
+                    TextColor="White"/>
+    			<Entry 
+                    x:Name="usernameEntry" 
+                    Placeholder="username"
+                    TextColor="White"/>
+    			<Label 
+                    Text="{Binding titlePassword}"
+                    TextColor="White"/>
+    			<Entry 
+                    x:Name="passwordEntry" 
+                    IsPassword="true"
+                    TextColor="White"/>
+    			<Button 
+                    Text="{Binding titleLogin}"  
+                    TextColor="White"
+                    Command="{Binding OnLoginCommand}"/>
+    			<Label 
+                    x:Name="spaceContent" />
+    		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

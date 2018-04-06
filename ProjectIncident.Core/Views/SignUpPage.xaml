@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="ProjectIncident.Core.View.SignUpPage"
+			 Title="Sign Up"
+             BackgroundColor="Teal">
+	<ContentPage.Content
+         >
+		<StackLayout VerticalOptions="StartAndExpand"
+                    BackgroundColor="Gray">
+			<Label Text="{Binding titleUserFirstName}" />
+			<Entry x:Name="FirstNameEntry" Placeholder="First Name" Text="{Binding ContentFirstName}" />
+
+            <Label Text="{Binding titleUserLastName}" />
+            <Entry x:Name="LastNameEntry" Placeholder="Last Name" Text="{Binding ContentLastName}" />
+
+            <Label Text="{Binding titleEmail}" />
+            <Entry x:Name="emailEntry" Placeholder="Email address" Text="{Binding ContentEmail}" />
+            
+            <Label Text="{Binding titlePassword}" />
+			<Entry x:Name="passwordEntry" IsPassword="true" Placeholder="Password" Text="{Binding ContentPassword}" />
+
+			<Button Text="{Binding titleSignUp}" Command="{Binding CreateUserCommand}"/>
+			<Label x:Name="messageLabel" />
+            
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
